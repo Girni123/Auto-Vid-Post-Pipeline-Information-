@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AI Content Flow — Private content pipeline automation for TikTok publishing.">
-  <title>AI Content Flow</title>
+  <meta name="description" content="Autom Gen AI Video Pipeline — Private automation tool for publishing AI-generated short-form videos to TikTok.">
+  <title>Autom Gen AI Video Pipeline</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -23,44 +23,169 @@
 </head>
 <body class="bg-zinc-950 text-zinc-300 font-sans antialiased min-h-screen flex flex-col">
 
-  <main class="flex-1 flex items-center justify-center px-6 py-16">
-    <div class="w-full max-w-md text-center">
+  <!-- Nav -->
+  <header class="px-6 py-5 border-b border-zinc-900">
+    <div class="max-w-3xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="text-sm font-medium text-white tracking-tight hover:text-zinc-300 transition-colors">
+        Autom Gen AI Video Pipeline
+      </a>
+      <nav class="flex items-center gap-5 text-xs text-zinc-600">
+        <a href="#about" class="hover:text-zinc-400 transition-colors hidden sm:inline">About</a>
+        <a href="#how-it-works" class="hover:text-zinc-400 transition-colors hidden sm:inline">How it works</a>
+        <a href="contact.html" class="hover:text-zinc-400 transition-colors">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-      <div class="mb-8 mx-auto w-40 h-40 sm:w-48 sm:h-48 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-lg shadow-black/20">
-        <img
-          src="images/bot.png"
-          alt="AI Content Flow Bot"
-          class="w-full h-full object-cover"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-        >
-        <div class="hidden w-full h-full items-center justify-center p-4 text-zinc-600 text-xs leading-relaxed">
-          Place your square bot image at<br><span class="text-zinc-500 font-mono mt-1">images/bot.png</span>
+  <main class="flex-1">
+
+    <!-- Hero -->
+    <section class="px-6 py-16 sm:py-20 text-center border-b border-zinc-900">
+      <div class="max-w-2xl mx-auto">
+        <div class="mb-8 mx-auto w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 shadow-lg shadow-black/30">
+          <img
+            src="images/bot.png"
+            alt="Pipeline bot mascot"
+            class="w-full h-full object-cover"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          >
+          <div class="hidden w-full h-full items-center justify-center p-4 text-zinc-600 text-xs leading-relaxed">
+            Place your square bot image at<br><span class="text-zinc-500 font-mono mt-1">images/bot.png</span>
+          </div>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl font-semibold text-white tracking-tight mb-3">
+          Autom Gen AI Video Pipeline
+        </h1>
+        <p class="text-sm text-zinc-500 font-medium tracking-wide uppercase mb-6">
+          Personal TikTok Publishing Automation
+        </p>
+        <p class="text-zinc-300 text-base sm:text-lg leading-relaxed max-w-lg mx-auto">
+          A small private bot that posts my pre-rendered AI videos to TikTok — so I don't have to upload every clip by hand.
+        </p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="px-6 py-14 sm:py-16 border-b border-zinc-900">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-lg font-medium text-white mb-4">What this tool actually does</h2>
+        <div class="space-y-4 text-sm sm:text-base text-zinc-400 leading-relaxed">
+          <p>
+            <strong class="text-zinc-300">Autom Gen AI Video Pipeline</strong> is a private, non-commercial
+            utility built for one purpose: automatically publishing my own AI-generated short-form videos
+            to my personal TikTok account.
+          </p>
+          <p>
+            I create the videos elsewhere, drop them into the pipeline, and the bot handles the rest —
+            scheduling, OAuth authentication, and direct upload via the TikTok API. No manual posting,
+            no copy-pasting captions at midnight.
+          </p>
+          <p>
+            This is not a public SaaS product. Nobody else can sign up, and no data is collected from
+            third parties. It exists purely to save me time on a repetitive publishing task.
+          </p>
         </div>
       </div>
+    </section>
 
-      <h1 class="text-3xl sm:text-4xl font-semibold text-white tracking-tight mb-2">
-        AI Content Flow
-      </h1>
-      <p class="text-sm text-zinc-500 font-medium tracking-wide uppercase mb-6">
-        Private Content Pipeline Automation
-      </p>
+    <!-- How it works -->
+    <section id="how-it-works" class="px-6 py-14 sm:py-16 border-b border-zinc-900">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-lg font-medium text-white mb-8 text-center">How it works</h2>
+        <div class="grid sm:grid-cols-3 gap-6">
+          <div class="text-center p-5 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
+            <div class="w-8 h-8 mx-auto mb-3 rounded-lg bg-zinc-800 flex items-center justify-center text-xs font-medium text-zinc-400">1</div>
+            <h3 class="text-sm font-medium text-zinc-200 mb-2">Create</h3>
+            <p class="text-xs text-zinc-500 leading-relaxed">AI videos are rendered and prepared locally as ready-to-publish files.</p>
+          </div>
+          <div class="text-center p-5 rounded-xl bg-zinc-900/50 border border-zinc-800/80">
+            <div class="w-8 h-8 mx-auto mb-3 rounded-lg bg-zinc-800 flex items-center justify-center text-xs font-medium text-zinc-400">2</div>
+            <h3 class="text-sm font-medium text-zinc-200 mb-2">Queue</h3>
+            <p class="text-xs text-zinc-500 leading-relaxed">Videos enter the pipeline with captions and a scheduled publish time.</p>
+          </div>
+          <div class="text-center p-5 rounded-xl bg-zinc-900/50 border border-zinc-800/80 sm:col-span-1">
+            <div class="w-8 h-8 mx-auto mb-3 rounded-lg bg-zinc-800 flex items-center justify-center text-xs font-medium text-zinc-400">3</div>
+            <h3 class="text-sm font-medium text-zinc-200 mb-2">Publish</h3>
+            <p class="text-xs text-zinc-500 leading-relaxed">The bot uploads directly to TikTok via OAuth — fully automated, no manual steps.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <p class="text-zinc-300 text-sm sm:text-base leading-relaxed mb-4">
-        This little bot handles publishing videos to TikTok for me — quietly, automatically, and on schedule.
-      </p>
+    <!-- Why this website -->
+    <section class="px-6 py-14 sm:py-16 border-b border-zinc-900">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-lg font-medium text-white mb-4">Why this website exists</h2>
+        <p class="text-sm sm:text-base text-zinc-400 leading-relaxed mb-6">
+          TikTok's developer platform requires a publicly reachable domain for OAuth redirects,
+          plus a Privacy Policy and Terms of Service before API access is granted. This site
+          fulfills those requirements — it's the official home base for the pipeline, nothing more.
+        </p>
+        <ul class="space-y-2 text-sm text-zinc-500">
+          <li class="flex items-start gap-2">
+            <span class="text-zinc-600 mt-0.5">—</span>
+            OAuth 2.0 redirect URL for secure account authorization
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-zinc-600 mt-0.5">—</span>
+            Privacy Policy and Terms of Service as required by TikTok
+          </li>
+          <li class="flex items-start gap-2">
+            <span class="text-zinc-600 mt-0.5">—</span>
+            A contact point for API review and compliance questions
+          </li>
+        </ul>
+      </div>
+    </section>
 
-      <p class="text-zinc-500 text-sm leading-relaxed">
-        An internal, private utility that connects a single creator profile via OAuth 2.0
-        to automate scheduling, direct publishing, and management of pre-rendered AI short-form videos.
-      </p>
-    </div>
+    <!-- Image placeholders -->
+    <section class="px-6 py-14 sm:py-16">
+      <div class="max-w-2xl mx-auto">
+        <h2 class="text-lg font-medium text-white mb-2 text-center">Pipeline in action</h2>
+        <p class="text-xs text-zinc-600 text-center mb-8">Optional screenshots — drop images into the <span class="font-mono text-zinc-500">images/</span> folder</p>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="aspect-video rounded-xl overflow-hidden border border-zinc-800 bg-zinc-900">
+            <img
+              src="images/pipeline.png"
+              alt="Pipeline overview"
+              class="w-full h-full object-cover"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="hidden w-full h-full items-center justify-center p-4 text-zinc-600 text-xs text-center">
+              <span class="font-mono text-zinc-500">images/pipeline.png</span>
+            </div>
+          </div>
+          <div class="aspect-video rounded-xl overflow-hidden border border-zinc-800 bg-zinc-900">
+            <img
+              src="images/workflow.png"
+              alt="Publishing workflow"
+              class="w-full h-full object-cover"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            >
+            <div class="hidden w-full h-full items-center justify-center p-4 text-zinc-600 text-xs text-center">
+              <span class="font-mono text-zinc-500">images/workflow.png</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="px-6 py-6 border-t border-zinc-900">
-    <div class="max-w-md mx-auto flex items-center justify-center gap-6 text-xs text-zinc-600">
-      <a href="terms.html" class="hover:text-zinc-400 transition-colors">Terms of Service</a>
-      <span class="text-zinc-800">|</span>
-      <a href="privacy.html" class="hover:text-zinc-400 transition-colors">Privacy Policy</a>
+  <!-- Footer -->
+  <footer class="px-6 py-8 border-t border-zinc-900">
+    <div class="max-w-2xl mx-auto text-center space-y-4">
+      <p class="text-xs text-zinc-600">
+        Private internal tool · Not a public service
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-zinc-600">
+        <a href="terms.html" class="hover:text-zinc-400 transition-colors">Terms of Service</a>
+        <a href="privacy.html" class="hover:text-zinc-400 transition-colors">Privacy Policy</a>
+        <a href="contact.html" class="hover:text-zinc-400 transition-colors">Contact</a>
+        <a href="impressum.html" class="hover:text-zinc-400 transition-colors">Impressum</a>
+      </div>
+      <p class="text-xs text-zinc-700">© 2026 Autom Gen AI Video Pipeline</p>
     </div>
   </footer>
 
